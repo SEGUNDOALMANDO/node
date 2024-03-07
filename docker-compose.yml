@@ -1,0 +1,12 @@
+version: '3'
+services:
+  node-app:
+    image: node:12
+    ports:
+      - "3000:3000"
+    command: >
+      /bin/sh -c "git clone https://github.com/SEGUNDOALMANDO/node.git /app &&
+                  cd /app &&
+                  npm install &&
+                  npm start"
+    # Add other configurations as needed, such as volumes, environment variables, etc.

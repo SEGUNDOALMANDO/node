@@ -4,11 +4,15 @@
   "description": "node-example",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",  // Cambiado el script de inicio
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "12.x"  // Especificando la versión de Node.js
+  },
   "dependencies": {
     "express": "^4.18.3"
   }
