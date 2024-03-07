@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-app-pod
+spec:
+  containers:
+  - name: node-app-container
+    image: node:18
+    ports:
+    - containerPort: 3000  # El puerto en el que tu aplicación Node.js escucha
+    # Agrega otros campos según sea necesario, como volúmenes, variables de entorno, etc.
+    command: ["/bin/sh"]
+    args: ["-c", "git clone https://github.com/SEGUNDOALMANDO/node.git /app && npm install && npm start"]
